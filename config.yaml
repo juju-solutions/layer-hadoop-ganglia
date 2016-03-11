@@ -1,0 +1,8 @@
+options:
+  ganglia_metrics:
+    type: boolean
+    default: false
+    description: |
+      Enable metrics using Ganglia, if related to the Ganglia charm via the
+      ganglia:master relation.  The Hadoop services *will* be restarted if
+      this option is enabled and the Ganglia service is related.
