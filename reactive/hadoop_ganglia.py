@@ -25,7 +25,8 @@ def configure_ganglia(ganglia):
         source='hadoop-metrics2.properties.j2',
         target=GANGLIA_CONF_FILE,
         context={
-            'servers': ','.join(sorted(map('{0[host]}:{0[port]}'.format, endpoints))),
+            'servers': ','.join(sorted(map('{0[host]}:{0[port]}'.format,
+                                           endpoints))),
         },
     )
     set_state('hadoop-ganglia.enabled')
